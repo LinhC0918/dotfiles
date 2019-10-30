@@ -1,0 +1,25 @@
+{
+    "workbench.iconTheme": "vs-nomo-dark",
+    "terminal.explorerKind": "external",
+    "terminal.external.linuxExec": "zsh",
+    "terminal.integrated.shell.linux": "/bin/zsh",
+    "editor.rulers": [120],
+    "editor.tabSize": 2,
+    "workbench.editor.enablePreview": false,
+    "files.insertFinalNewline": true,
+    "editor.renderWhitespace": "selection",
+    "editor.minimap.enabled": false,
+    "window.zoomLevel": 1,
+    "keyboard.dispatch": "keyCode",
+    "workbench.statusBar.visible": false,
+    "ruby.intellisense": "rubyLocate",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "files.autoSave": "off",
+    // "editor.multiCursorModifier": "ctrlCmd",
+    "macros": {
+        "addSemicolon": [
+          "cursorEnd",
+            {"command": "type", "args": {"text": ";"}}
+        ],
+      }
+}

@@ -1,0 +1,27 @@
+[
+    {
+        "key": "alt+z",
+        "command": "editor.action.addSelectionToNextFindMatch",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+q",
+        "command": "workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "-workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+shift+W",
+        "command": "workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "alt+",
+        "command": "workbench.action.toggleMultiCursorModifier"
+    },
+    {
+        "key": "ctrl+;",
+        "command": "macros.addSemicolon"
+    }
+]
