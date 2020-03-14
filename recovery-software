@@ -15,19 +15,6 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 sudo apt-get update
 sudo apt-get install -y git-core zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common libffi-dev nodejs yarn
 
-#rvm
-sudo apt-get install libgdbm-dev libncurses5-dev automake libtool bison libffi-dev
-gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
-curl -sSL https://get.rvm.io | bash -s stable
-source ~/.rvm/scripts/rvm
-
-#ruby
-rvm install 2.6.3
-gem install bundler
-
-#rails
-gem install rails -v 5.2.3
-
 #mysql
 sudo apt-get install -y mysql-server mysql-client libmysqlclient-dev
 
@@ -44,8 +31,55 @@ sudo apt install -y mysql-workbench
 sudo apt install -y zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+# autosuggestion
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+#rvm
+sudo apt-get install libgdbm-dev libncurses5-dev automake libtool bison libffi-dev
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+curl -sSL https://get.rvm.io | bash -s stable
+source ~/.rvm/scripts/rvm
+#rbenv
+# https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-ubuntu-18-04
+
+#ruby
+rvm install 2.6.3
+gem install bundler
+
+#rails
+gem install rails -v 5.2.3
+
+# theme agnoster
+cd
+wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
+wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf
+mkdir ~/.fonts/
+mv PowerlineSymbols.otf ~/.fonts/
+mkdir -p .config/fontconfig/conf.d
+fc-cache -vf ~/.fonts/
+mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
+
+# change terminal color to Solarize
+sudo apt-get install dconf-cli
+git clone git://github.com/sigurdga/gnome-terminal-colors-solarized.git ~/.solarized
+cd ~/.solarized
+./install.sh
+cd
+wget https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.ansi-dark
+mv dircolors.ansi-dark .solarized
+
 #neovim
-# https://github.com/neovim/releases/tag/v0.4.3
+wget --quiet https://github.com/neovim/neovim/releases/download/v0.4.3/nvim.appimage --output-document nvim
+chmod u+x nvim
+sudo mv nvim /usr/bin
+#refer: https://www.linode.com/docs/tools-reference/tools/how-to-install-neovim-and-plugins-with-vim-plug/#install-the-neovim-appimage
+
+# vim-plug
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# xclip
+sudo apt install -y xclip
 
 # mps youtube
 sudo apt install -y python3-pip mpv

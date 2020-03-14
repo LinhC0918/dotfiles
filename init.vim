@@ -28,7 +28,6 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-endwise'
 Plug 'honza/vim-snippets'
-Plug 'SirVer/ultisnips'
 
 Plug 'easymotion/vim-easymotion'
 
@@ -260,3 +259,7 @@ function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+
+" clipboard
+map <C-v> "*p
+
