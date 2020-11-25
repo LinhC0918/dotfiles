@@ -1,4 +1,4 @@
-export ZSH="/home/linh/.oh-my-zsh"
+export ZSH="/home/nguyen.van.linhc/.oh-my-zsh"
 
 ZSH_THEME="agnoster"
 
@@ -28,6 +28,10 @@ alias nv="nvim"
 alias rdmr="rails db:migrate:reset"
 alias gclf="git clean -f"
 alias gstai="git stash --include-untracked"
+alias be="bundle exec"
+alias ru="rubocop"
+alias beru="bundle exec rubocop"
+alias bers="bundle exec rspec"
 
 # 
 eval `dircolors ~/.solarized/dircolors.ansi-dark`
