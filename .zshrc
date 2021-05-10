@@ -1,4 +1,4 @@
-export ZSH="/home/nguyen.van.linhc/.oh-my-zsh"
+export ZSH="/home/linh/.oh-my-zsh"
 
 ZSH_THEME="agnoster"
 
@@ -45,3 +45,4 @@ export DEFAULT_USER="$(whoami)"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=blue'
