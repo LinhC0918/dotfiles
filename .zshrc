@@ -1,3 +1,6 @@
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
 export ZSH="/home/linh/.oh-my-zsh"
 
 ZSH_THEME="agnoster"
@@ -38,11 +41,5 @@ eval `dircolors ~/.solarized/dircolors.ansi-dark`
 
 # 
 export DEFAULT_USER="$(whoami)"
-
-# 
-# [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
-
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=blue'
