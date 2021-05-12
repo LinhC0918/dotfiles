@@ -5,7 +5,7 @@ export ZSH="/home/linh/.oh-my-zsh"
 
 ZSH_THEME="agnoster"
 
-plugins=(git rails ruby zsh-autosuggestions tmux)
+plugins=(git rails ruby zsh-autosuggestions tmux zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
