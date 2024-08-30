@@ -13,7 +13,6 @@ Plug 'universal-ctags/ctags'
 " Nerd tree
 Plug 'scrooloose/nerdtree'
 " Git
-Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 " Comment
 Plug 'scrooloose/nerdcommenter'
